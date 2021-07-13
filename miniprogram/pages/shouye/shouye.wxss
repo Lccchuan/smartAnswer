@@ -1,0 +1,24 @@
+Page{
+  background-color:#FFFFF0;
+}
+.yonghu{
+  text-align: left;
+  color:#000000;
+  margin: 35rpx 35rpx;
+  font-size: 35rpx;
+}
+.v1{
+  text-align: left;
+  color:#000000;
+  margin: 20rpx 40rpx;
+  font-size: 40rpx;
+}
+.op1{
+  height: 170rpx;
+  width: 170rpx;
+  margin: 0 auto;  
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+}

@@ -1,0 +1,16 @@
+.tips{
+  color:#000000;
+  letter-spacing: 10px;
+  text-align: left;
+  text-indent: 50px;
+  text-decoration-color:#1E90FF;
+  line-height: 30px;
+  white-space: normal;
+}
+.btn1 {
+  width: 80%;
+  margin-top: 20rpx;
+  background-color:#87CEFA;
+  color:white;
+  border-radius: 98rpx; 
+}

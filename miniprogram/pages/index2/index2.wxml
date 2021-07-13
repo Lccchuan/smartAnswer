@@ -1,0 +1,19 @@
+<view class="tips">当前第{{current}}题/共{{total}}题</view>
+<progress percent="{{percent}}" class="pro" color="#00BFFF" show-info></progress>
+
+
+<view >题目：{{subject.title}}</view>
+      <radio-group bindchange="radioChange">
+      <view wx:for="{{subject.options}}" class="items">
+      <radio value="{{item.code}}" checked="{{isSelect}}"  color="#00BFFF"/>
+      <text>{{item.code}}:{{item.option}}</text>
+      </view>
+      </radio-group>
+     <view>
+      <button  bindtap="submit" class="btn1">提交答案</button>
+      </view>
+      <view>
+    <button  bindtap="return" class="btn2">返回</button>
+    </view>
+  
+

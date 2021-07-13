@@ -1,0 +1,18 @@
+/* pages/errorOptions/errorOptions.wxss */
+.tips{
+  text-align: center;
+  color: red;
+  margin: 15rpx;
+  font-size: 45rpx;
+}
+.items{
+  margin: 20rpx;
+}
+.red{
+  color: red;
+}
+.btn_root{
+  display: flex;
+  justify-content: space-between;
+  margin: 30rpx;
+}

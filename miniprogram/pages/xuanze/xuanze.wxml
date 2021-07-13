@@ -1,0 +1,6 @@
+<text class="danyuan1" bindtap="danyuan1" >Unit1</text>
+<text class="danyuan2" bindtap="danyuan2" >Unit2</text>
+<text class="danyuan3" bindtap="danyuan3" >Unit3</text>
+<text class="danyuan4" bindtap="danyuan4" >Unit4</text>
+<text class="danyuan5" bindtap="danyuan5" >Unit5</text>
+<text class="danyuan6" bindtap="danyuan6" >Unit6</text>

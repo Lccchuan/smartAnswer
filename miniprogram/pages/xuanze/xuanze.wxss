@@ -1,0 +1,51 @@
+
+.danyuan1{
+  height: 60px;
+  text-align: center;
+  color:#4A708B;
+  margin: 15rpx;
+  font-size: 45rpx;
+  background-color:#AFEEEE;
+  
+}
+.danyuan2{
+  height: 60px;
+  text-align: center;
+  color:#4A708B;
+  margin: 15rpx;
+  font-size: 45rpx;
+  background-color:#B0E0E6;
+  
+}
+.danyuan3{
+  height: 60px;
+  text-align: center;
+  color:#4A708B;
+  margin: 15rpx;
+  font-size: 45rpx;
+  background-color:#ADD8E6;
+}
+.danyuan4{
+  height: 60px;
+  text-align: center;
+  color:#4A708B;
+  margin: 15rpx;
+  font-size: 45rpx;
+  background-color:#87CEEB;
+}
+.danyuan5{
+  height: 60px;
+  text-align: center;
+  color:#4A708B;
+  margin: 15rpx;
+  font-size: 45rpx;
+  background-color:#87CEFA;
+}
+.danyuan6{
+  height: 60px;
+  text-align: center;
+  color:#4A708B;
+  margin: 15rpx;
+  font-size: 45rpx;
+  background-color:#98F5FF;
+}

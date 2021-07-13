@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/shouye/shouye",
+    "pages/xuanze/xuanze",
+    "pages/index2/index2",
+    "pages/index/index",
+    "pages/errorOptions/errorOptions"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "智能背单词",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color": "#989898",
+    "selectedColor": "#0000FF",
+    "list": [{
+      "pagePath": "pages/shouye/shouye",
+      "text": "首页",
+     "iconPath": "images/用户状态.png",
+     "selectedIconPath": "images/用户状态1.png"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "每日推荐",
+     "iconPath": "images/单词.png",
+     "selectedIconPath": "images/单词选择.png"
+    },{
+      "pagePath": "pages/xuanze/xuanze",
+      "text": "单元选择",
+     "iconPath": "images/单元.png",
+     "selectedIconPath": "images/单元选择.png"
+    }]
+  },
+  "borderStyle":"white",
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
