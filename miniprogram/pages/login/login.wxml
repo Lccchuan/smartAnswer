@@ -1,0 +1,5 @@
+<view class="login-box">
+  <open-data type="userAvatarUrl" class="op1"></open-data>
+<open-data type="userNickName"  class="op1"></open-data>
+<button open-type="getUserInfo" type="primary" bindgetuserinfo="getUserInfo">请登录</button>
+</view>

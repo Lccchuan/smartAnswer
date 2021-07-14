@@ -1,0 +1,13 @@
+.login-box{
+padding-top: 20vh;
+
+}
+.op1{
+  height: 170rpx;
+  width: 170rpx;
+  margin: 0 auto;  
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
