@@ -1,51 +1,32 @@
-
-.danyuan1{
-  height: 60px;
+.xuanze{
+  padding: 20px;
+}
+.danyuan{
+  margin-bottom: 40rpx;
+  height: 12vh;
   text-align: center;
-  color:#4A708B;
-  margin: 15rpx;
   font-size: 45rpx;
-  background-color:#AFEEEE;
-  
+  border-radius: 10rpx;
+  box-shadow: 0 0 30rpx rgb(0 0 0 / 20%);
+  line-height: 12vh;
+  letter-spacing: 2rpx;
+  color:#fff
+}
+.danyuan1{
+  background-color:#e54d42;
 }
 .danyuan2{
-  height: 60px;
-  text-align: center;
-  color:#4A708B;
-  margin: 15rpx;
-  font-size: 45rpx;
-  background-color:#B0E0E6;
-  
+  background-color:#f37b1d
 }
 .danyuan3{
-  height: 60px;
-  text-align: center;
-  color:#4A708B;
-  margin: 15rpx;
-  font-size: 45rpx;
-  background-color:#ADD8E6;
+  background-color:#8dc63f;
 }
 .danyuan4{
-  height: 60px;
-  text-align: center;
-  color:#4A708B;
-  margin: 15rpx;
-  font-size: 45rpx;
-  background-color:#87CEEB;
+  background-color:#1cbbb4;
 }
 .danyuan5{
-  height: 60px;
-  text-align: center;
-  color:#4A708B;
-  margin: 15rpx;
-  font-size: 45rpx;
-  background-color:#87CEFA;
+  background-color:#6739b6;
 }
 .danyuan6{
-  height: 60px;
-  text-align: center;
-  color:#4A708B;
-  margin: 15rpx;
-  font-size: 45rpx;
-  background-color:#98F5FF;
+  background-color:#e03997;
 }

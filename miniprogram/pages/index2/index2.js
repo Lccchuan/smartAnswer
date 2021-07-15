@@ -16,22 +16,107 @@ Page({
     totalError: 0, //用户错题数
     current: 1,
     userInfo: null,
+    showNone:false,
+    noneText:''
   },
-  onLoad() {
+  onLoad(options) {
+    console.log(options)
     let that = this;
     this.data.userInfo = JSON.parse(wx.getStorageSync("userInfo"));
-    wx.cloud
+    switch (options.type) {
+      case "1":
+        wx.setNavigationBarTitle({
+          title: '连续单项选择题',
+        })
+        this.getUnitQuestion()
+        break;
+      case "2":
+        wx.setNavigationBarTitle({
+          title: '错题集单项选择题',
+        })
+        this.getWrongQuestion()
+        break;
+        case "3":
+          wx.setNavigationBarTitle({
+            title: '拓展训练单项选择题',
+          })
+          this.getExpandQuestion()
+          break
+    }
+  },
+  /**
+   * 获取题目列表
+   *ids:[]：错题id数据
+   *isIn；是否要查询ids内的数据
+   */ 
+  getUnitQuestion(ids,isIn){
+    let promise=null
+    const _=wx.cloud.database().command
+    if(ids){
+     promise= wx.cloud
+      .database()
+      .collection("questions")
+      .where(isIn?{_id:_.in(ids)}:{_id:_.nin(ids)})
+      .get()
+    }else{
+      promise= wx.cloud
       .database()
       .collection("questions")
       .get()
-      .then((res) => {
-        titles = res.data;
-        let subject = titles[0];
-        that.setData({
-          subject,
-          total: titles.length,
-        });
+    }
+    promise
+    .then((res) => {
+      titles = res.data;
+      let subject = titles[0];
+      this.setData({
+        subject,
+        total: titles.length,
       });
+    });
+  },
+  // 获取错题题目
+  async getWrongQuestion(){
+    try {
+    const { openid } = this.data.userInfo,res=await  this.hasUserAnswer(openid), data=!res.data.length?[]:res.data[0].times
+    // 如果没有答过题那就没有错题
+    if(!data.length){
+     this.showNones("暂时没有错题噢,真棒！")
+    }else{
+      const wrongIds=this.getIncludIds(data,true),_=wx.cloud.database().command
+      if(!wrongIds.length){
+        this.showNones("暂时没有错题噢,真棒！")
+      }else
+      this.getUnitQuestion(wrongIds,true)
+    }
+  } catch (error) {
+     this.showNones("暂时没有错题噢,真棒！")
+  }
+  },
+  // 获取拓展题题目（不包括错题）
+  async getExpandQuestion(){
+    try {
+      const { openid } = this.data.userInfo,res=await  this.hasUserAnswer(openid), data=!res.data.length?[]:res.data[0].times
+      const expandIds=this.getIncludIds(data,false)
+      this.getUnitQuestion(expandIds,false)
+    } catch (error) {
+     this.showNones("暂无数据") 
+    }
+  },
+  
+  getIncludIds(data){
+    const arr=[]
+    data.forEach(val=>{
+      if(val.Rtimes!==val.Ttimes){
+        arr.push(val.danci_id)
+      }
+    })
+    return arr
+  },
+  showNones(text){
+    this.setData({
+      noneText:text,
+      showNone:true
+    })
   },
   async updata(isPass) {
     const { openid } = this.data.userInfo;
@@ -140,6 +225,7 @@ Page({
         icon: "none",
         title: "已经最后一道了",
       });
+      wx:wx.navigateBack(-1)
       return;
     }
 

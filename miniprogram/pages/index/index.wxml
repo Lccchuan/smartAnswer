@@ -1,12 +1,4 @@
-
-   <view class="tips">当前第{{current}}题/共5题</view>
-<progress percent="{{percent}}" class="pro" color="#00BFFF" show-info></progress>
-<view >题目：{{subject.title}}</view>
-      <radio-group bindchange="radioChange">
-      <view wx:for="{{subject.options}}" class="items">
-      <radio value="{{item.code}}" checked="{{isSelect}}"/>
-      <text>{{item.code}}:{{item.option}}</text>
-      </view>
-      </radio-group>
-
-      <button  bindtap="submit" class="btn1">提交答案</button>
+<view class="index">
+   <navigator target="view" url="/pages/index2/index2?type=2" class="danyuan" bindtap="danyuan1" >错题训练</navigator>
+   <navigator target="view" url="/pages/index2/index2?type=3"  class="danyuan danyuan2" bindtap="danyuan2" >拓展训练</navigator>  
+</view>

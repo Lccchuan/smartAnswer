@@ -24,6 +24,7 @@ Page({
   onLoad: function (options) {
     let that = this,
       userInfo = wx.getStorageSync("userInfo");
+      debugger
     try {
       const { openid } = JSON.parse(userInfo);
       //  获取用户信息
@@ -45,6 +46,7 @@ Page({
     } catch (error) {
       this.gotoLogin();
     }
+    debugger
     this.messureCanvas();
   },
   gotoLogin() {

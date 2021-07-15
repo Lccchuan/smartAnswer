@@ -70,6 +70,7 @@ submit(){
       icon:'none',
       title:"已经最后一道了"
     })
+    wx:wx.navigateBack(-1)
     return
   }
   let subject=titles[num-1]

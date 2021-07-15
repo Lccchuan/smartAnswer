@@ -1,4 +1,9 @@
-<view class="tips">当前第{{current}}题/共{{total}}题</view>
+<view wx:if="{{showNone}}" class="none-box"> 
+<image src="../../images/none.png"></image>
+<view>{{noneText}}</view>
+</view>
+<view wx:else>
+  <view class="tips">当前第{{current}}题/共{{total}}题</view>
 <progress percent="{{percent}}" class="pro" color="#00BFFF" show-info></progress>
 
 
@@ -15,5 +20,6 @@
       <view>
     <button  bindtap="return" class="btn2">返回</button>
     </view>
+</view>
   
 

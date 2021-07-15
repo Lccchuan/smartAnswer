@@ -1,6 +1,8 @@
-<text class="danyuan1" bindtap="danyuan1" >Unit1</text>
-<text class="danyuan2" bindtap="danyuan2" >Unit2</text>
-<text class="danyuan3" bindtap="danyuan3" >Unit3</text>
-<text class="danyuan4" bindtap="danyuan4" >Unit4</text>
-<text class="danyuan5" bindtap="danyuan5" >Unit5</text>
-<text class="danyuan6" bindtap="danyuan6" >Unit6</text>
+<view class="xuanze">
+  <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan1"  >Unit1</navigator>
+    <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan2"  >Unit2</navigator>
+ <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan3"  >Unit3</navigator>
+ <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan4"  >Unit4</navigator>
+ <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan5" >Unit5</navigator>
+ <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan6" >Unit6</navigator>
+</view>

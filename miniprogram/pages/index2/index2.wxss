@@ -26,3 +26,20 @@
   color:#87CEFA;
   border-radius: 98rpx; 
 }
+.none-box{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.none-box image{
+  width: 30vw;
+  height: 30vw;
+}
+.none-box view{
+  color:#999;
+  font-size:30rpx;
+  line-height: 70rpx;
+}
