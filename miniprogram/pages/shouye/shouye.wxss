@@ -22,3 +22,14 @@ Page{
   overflow: hidden;
   border-radius: 50%;
 }
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.op2{
+  margin-top: 30rpx;
+  color:#666
+}

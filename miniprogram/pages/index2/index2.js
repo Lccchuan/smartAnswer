@@ -28,7 +28,7 @@ Page({
         wx.setNavigationBarTitle({
           title: '连续单项选择题',
         })
-        this.getUnitQuestion()
+        this.getUnitQuestion(null,null,options.id)
         break;
       case "2":
         wx.setNavigationBarTitle({
@@ -49,7 +49,7 @@ Page({
    *ids:[]：错题id数据
    *isIn；是否要查询ids内的数据
    */ 
-  getUnitQuestion(ids,isIn){
+  getUnitQuestion(ids,isIn,id){
     let promise=null
     const _=wx.cloud.database().command
     if(ids){
@@ -62,6 +62,7 @@ Page({
       promise= wx.cloud
       .database()
       .collection("questions")
+      .where({unitid:_.eq(id)})
       .get()
     }
     promise
@@ -72,6 +73,9 @@ Page({
         subject,
         total: titles.length,
       });
+      if(!titles.length){
+        this.showNones("暂无数据") 
+      }
     });
   },
   // 获取错题题目
@@ -82,7 +86,7 @@ Page({
     if(!data.length){
      this.showNones("暂时没有错题噢,真棒！")
     }else{
-      const wrongIds=this.getIncludIds(data,true),_=wx.cloud.database().command
+      const wrongIds=this.getIncludIds(data,false),_=wx.cloud.database().command
       if(!wrongIds.length){
         this.showNones("暂时没有错题噢,真棒！")
       }else
@@ -96,22 +100,30 @@ Page({
   async getExpandQuestion(){
     try {
       const { openid } = this.data.userInfo,res=await  this.hasUserAnswer(openid), data=!res.data.length?[]:res.data[0].times
-      const expandIds=this.getIncludIds(data,false)
+      
+      const expandIds=this.getIncludIds(data,true)
+      console.log(data,expandIds)
       this.getUnitQuestion(expandIds,false)
     } catch (error) {
      this.showNones("暂无数据") 
     }
   },
   
-  getIncludIds(data){
+  // 只展示五道错题
+  getIncludIds(data,isExpand){
     const arr=[]
-    data.forEach(val=>{
-      if(val.Rtimes!==val.Ttimes){
+    for(let i=0;i<data.length;i++){
+      const val=data[i]
+
+      if(isExpand||(val.Rtimes!==val.Ttimes&&arr.length<5)){
         arr.push(val.danci_id)
-      }
-    })
+      }else{
+        break
+      }  
+    }
     return arr
   },
+
   showNones(text){
     this.setData({
       noneText:text,
@@ -132,6 +144,7 @@ Page({
         danci_id: this.data.subject._id,
         Ttimes: 1,
         Rtimes: isPass ? 1 : 0,
+        unitid:this.data.subject.unitid
       });
     } else {
       for (let i = 0; i < times.length; i++) {

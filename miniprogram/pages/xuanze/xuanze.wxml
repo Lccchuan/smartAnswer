@@ -1,8 +1,8 @@
 <view class="xuanze">
-  <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan1"  >Unit1</navigator>
-    <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan2"  >Unit2</navigator>
- <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan3"  >Unit3</navigator>
- <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan4"  >Unit4</navigator>
- <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan5" >Unit5</navigator>
- <navigator target="view" url="/pages/index2/index2?type=1" class="danyuan danyuan6" >Unit6</navigator>
+  <navigator target="view" url="/pages/index2/index2?type=1&id=1" class="danyuan danyuan1"  >Unit1</navigator>
+    <navigator target="view" url="/pages/index2/index2?type=1&id=2" class="danyuan danyuan2"  >Unit2</navigator>
+ <navigator target="view" url="/pages/index2/index2?type=1&id=3" class="danyuan danyuan3"  >Unit3</navigator>
+ <navigator target="view" url="/pages/index2/index2?type=1&id=4" class="danyuan danyuan4"  >Unit4</navigator>
+ <navigator target="view" url="/pages/index2/index2?type=1&id=5" class="danyuan danyuan5" >Unit5</navigator>
+ <navigator target="view" url="/pages/index2/index2?type=1&id=6" class="danyuan danyuan6" >Unit6</navigator>
 </view>

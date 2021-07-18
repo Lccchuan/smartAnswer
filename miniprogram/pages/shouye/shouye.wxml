@@ -1,5 +1,4 @@
-<open-data type="userAvatarUrl" class="op1"></open-data>
-<open-data type="userNickName"  class="op1"></open-data>
+
 <!--<view class="v1">用户名：{{subject._id}}  正确率：{{subject.accuracy}}</view>-->
 
 
@@ -9,7 +8,9 @@
 
 
 <view class="container">
-  <canvas style="width:100%;height:350px;margin-top:20px;" canvas-id="pieCanvas" id="pieCanvas" bindtouchstart="touchStart"></canvas>
+  <open-data type="userAvatarUrl" class="op1"></open-data>
+<open-data type="userNickName"  class="op2"></open-data>
+  <canvas style="width:100%;height:50vh;margin-top:20px;"  canvas-id="canvas" id="canvas" bindtouchstart="touchStart"></canvas>
 </view>
 
 
